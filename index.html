@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이시원 · MD Portfolio</title>
+<title>이시원 · Brand MD Portfolio</title>
+<meta name="description" content="패션 브랜드 온라인·D2C MD 이시원 포트폴리오 — 자사몰 매출 3.3배, 운영 자동화, 데이터 기반 상품 운영">
+<meta property="og:type" content="website">
+<meta property="og:title" content="이시원 · Brand MD Portfolio">
+<meta property="og:description" content="성장기·성숙기·제로베이스 세팅까지, 온라인 채널과 자사몰(D2C)을 키워 온 5년 차 패션 MD">
+<meta property="og:url" content="https://see12121018.github.io/">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -85,7 +90,7 @@ nav{padding:1.4rem 2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;bor
 
 /* EXPAND */
 .career-expand{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
-.career-item.open .career-expand{max-height:900px}
+.career-item.open .career-expand{max-height:2400px}
 .expand-inner{padding:1rem 0 1.5rem 170px;display:grid;grid-template-columns:1fr 1fr;gap:2rem;border-top:1px solid var(--line)}
 .expand-title{font-size:0.6rem;color:var(--blue);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.7rem;padding-bottom:0.35rem;border-bottom:1px solid var(--border)}
 .expand-list{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
@@ -142,12 +147,30 @@ nav{padding:1.4rem 2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;bor
 .ppt-card img{width:100%;display:block}
 .ppt-card-label{padding:0.5rem 0.6rem;font-size:0.6rem;color:var(--gray);line-height:1.4;border-top:1px solid var(--line)}
 
+/* CASE STUDY */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border)}
+.case-item{padding:2rem 2.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.case-item:last-child{border-right:none}
+.case-num{font-size:0.6rem;color:var(--blue);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem}
+.case-title{font-size:0.95rem;font-weight:400;color:var(--black);margin-bottom:1.2rem;line-height:1.5}
+.case-label{font-size:0.56rem;color:var(--blue);letter-spacing:0.14em;text-transform:uppercase;margin:0.9rem 0 0.35rem}
+.case-text{font-size:0.74rem;color:var(--gray);line-height:1.8}
+.case-list{list-style:none;display:flex;flex-direction:column;gap:0.3rem}
+.case-list li{font-size:0.74rem;color:var(--gray);line-height:1.7;padding-left:1rem;position:relative}
+.case-list li::before{content:'–';position:absolute;left:0;color:#ccc}
+.case-result{margin-top:auto;padding-top:1.2rem;display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;border-top:1px solid var(--line)}
+.case-kpi-val{font-size:1.25rem;font-weight:300;color:var(--blue);line-height:1.1}
+.case-kpi-label{font-size:0.58rem;color:var(--gray);line-height:1.5;margin-top:0.25rem}
+.sub-title{font-size:0.62rem;color:var(--blue);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+.expand-list li b{color:var(--blue);font-weight:400}
+
 footer{padding:1.2rem 2.5rem;display:flex;justify-content:space-between;border-top:1px solid var(--border)}
 .footer-txt{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray)}
 
 @media(max-width:800px){
   nav{grid-template-columns:1fr 1fr;gap:0.8rem;padding:1rem 1.5rem}
-  .hero-wrap{grid-template-columns:1fr;margin-top:80px}
+  nav{position:static}
+  .hero-wrap{grid-template-columns:1fr;margin-top:0}
   .hero-left,.hero-right{padding:1.5rem}
   .hero-left{border-right:none}
   .photo-intro{grid-template-columns:110px 1fr;gap:1rem}
@@ -156,21 +179,14 @@ footer{padding:1.2rem 2.5rem;display:flex;justify-content:space-between;border-t
   .skills-grid,.contact-wrap,.workstyle-wrap{grid-template-columns:1fr}
   .skill-col,.contact-left{border-right:none}
   .career-row{grid-template-columns:1fr auto}
+  .case-grid{grid-template-columns:1fr}
+  .case-item{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem}
+  .work-cards-grid{grid-template-columns:1fr 1fr}
+  .ppt-grid{grid-template-columns:1fr 1fr}
+  .numbers-strip{grid-template-columns:repeat(2,1fr)}
+  .num-item:nth-child(2){border-right:none}
+  .num-item:nth-child(-n+2){border-bottom:1px solid var(--border)}
   .c-period{display:none}
-  
-/* WORK SAMPLES */
-.work-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;padding-bottom:1.5rem}
-.work-card{display:block;border:1px solid var(--border);padding:1rem;text-decoration:none;transition:background 0.15s;cursor:pointer}
-.work-card:hover{background:var(--lightgray)}
-.work-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
-.work-card-num{font-size:0.6rem;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase}
-.work-card-arrow{font-size:0.85rem;color:var(--blue)}
-.work-card-title{font-size:0.74rem;color:var(--black);line-height:1.5;margin-bottom:0.4rem}
-.work-card-url{font-size:0.6rem;color:var(--gray);letter-spacing:0.02em;word-break:break-all}
-.ppt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.8rem}
-.ppt-card{border:1px solid var(--line);overflow:hidden}
-.ppt-card img{width:100%;display:block}
-.ppt-card-label{padding:0.5rem 0.6rem;font-size:0.6rem;color:var(--gray);line-height:1.4;border-top:1px solid var(--line)}
 
 footer{flex-direction:column;gap:0.3rem}
 }
@@ -182,15 +198,15 @@ footer{flex-direction:column;gap:0.3rem}
 <nav>
   <div class="nav-col">
     <div class="nav-col-title">이시원</div>
-    <div class="nav-col-sub">온라인 영업 MD</div>
+    <div class="nav-col-sub">Brand MD</div>
   </div>
   <div class="nav-col">
     <div class="nav-col-title"><a href="#career" style="color:var(--blue)">Career</a></div>
     <div class="nav-col-sub">에스티오 → 마리떼 → 코드그라피 → 어나더오피스</div>
   </div>
   <div class="nav-col">
-    <div class="nav-col-title"><a href="#skills" style="color:var(--blue)">Skills</a></div>
-    <div class="nav-col-sub"><a href="#about-info">About</a></div>
+    <div class="nav-col-title"><a href="#case" style="color:var(--blue)">Case Study</a></div>
+    <div class="nav-col-sub"><a href="#work">Work Samples</a> · <a href="#skills">Skills</a> · <a href="#about-info">About</a></div>
   </div>
   <div class="nav-col">
     <div class="nav-col-title"><a href="#contact" style="color:var(--blue)">Contact</a></div>
@@ -208,26 +224,26 @@ footer{flex-direction:column;gap:0.3rem}
       </div>
       <div class="intro-text">
         <div class="intro-name">이시원</div>
-        <div class="intro-role">Online Sales MD · 5yr</div>
-        <div class="intro-desc">브랜드 성장기부터 하강기, 제로베이스 세팅까지 각 국면에서 필요한 역할을 수행하며 온라인 채널 전반을 경험한 MD입니다. 매출 데이터부터 자사몰 HTML까지, 실행과 분석을 함께 합니다.</div>
+        <div class="intro-role">Brand MD · 5yr+</div>
+        <div class="intro-desc">성장기·성숙기·제로베이스 세팅까지, 브랜드의 국면마다 온라인 채널과 자사몰(D2C)을 키워 온 MD입니다. 판매 데이터 분석부터 운영 자동화, 자사몰 HTML까지 직접 실행합니다.</div>
       </div>
     </div>
     <div class="numbers-strip">
       <div class="num-item">
-        <div class="num-val">148억</div>
-        <div class="num-label">마리떼 2022<br>연간 온라인 매출</div>
+        <div class="num-val">3.3배</div>
+        <div class="num-label">어나더오피스 자사몰<br>매출 전년비 (26.1~9월)</div>
+      </div>
+      <div class="num-item">
+        <div class="num-val">23.5%</div>
+        <div class="num-label">자사몰 매출 비중<br>전년 7.6% → 26년</div>
       </div>
       <div class="num-item">
         <div class="num-val">+145%</div>
-        <div class="num-label">마리떼 2022<br>전년비 성장률</div>
+        <div class="num-label">마리떼 2022<br>온라인 매출 148억</div>
       </div>
       <div class="num-item">
-        <div class="num-val">3,727만</div>
-        <div class="num-label">어나더오피스<br>29CM 캐시백</div>
-      </div>
-      <div class="num-item">
-        <div class="num-val">12+</div>
-        <div class="num-label">경험한<br>채널 수</div>
+        <div class="num-val">30분</div>
+        <div class="num-label">상품 등록 자동화<br>기존 3~4일</div>
       </div>
     </div>
   </div>
@@ -245,11 +261,11 @@ footer{flex-direction:column;gap:0.3rem}
       </div>
       <div class="info-row">
         <div class="info-label">자격증</div>
-        <div class="info-val"><span class="sub">패션머천다이징산업기사 · 컬러리스트산업기사 · 컴퓨터활용능력 2급 · 운전면허</span></div>
+        <div class="info-val"><span class="sub">패션머천다이징산업기사 (2015) · 컬러리스트산업기사 (2015) · 컴퓨터활용능력 2급 (2020) · 2종 보통 운전면허</span></div>
       </div>
       <div class="info-row">
         <div class="info-label">수상</div>
-        <div class="info-val"><span class="sub">최우수성적장학금 2회 수상 · 패션상품기획콘테스트</span></div>
+        <div class="info-val"><span class="sub">우수성적 장학금 (이화여자대학교, 2018) · 패션상품기획콘테스트 장려상 (한국의류학회, 2018)</span></div>
       </div>
     </div>
 
@@ -257,19 +273,15 @@ footer{flex-direction:column;gap:0.3rem}
       <div class="info-block-title">Internship & Exchange</div>
       <div class="info-row">
         <div class="info-label">폴로 랄프로렌</div>
-        <div class="info-val"><span class="sub">인턴 · 바잉팀</span></div>
+        <div class="info-val"><span class="sub">인턴 · 바잉팀 · 2019.12 — 2020.02</span></div>
       </div>
       <div class="info-row">
         <div class="info-label">신세계인터내셔날</div>
-        <div class="info-val"><span class="sub">인턴 · JAJU 소싱팀</span></div>
-      </div>
-      <div class="info-row">
-        <div class="info-label">인동에프엔</div>
-        <div class="info-val"><span class="sub">인턴 · 기획팀</span></div>
+        <div class="info-val"><span class="sub">인턴 · JAJU 소싱팀 · 2018.08 — 12</span></div>
       </div>
       <div class="info-row">
         <div class="info-label">2019. 01 — 06</div>
-        <div class="info-val"><span class="sub">미국 LA 교환학생</span></div>
+        <div class="info-val"><span class="sub">교환학생 · California State University, Los Angeles (패션 마케팅)</span></div>
       </div>
     </div>
 
@@ -277,7 +289,7 @@ footer{flex-direction:column;gap:0.3rem}
       <div class="info-block-title">Work Experience</div>
       <div class="info-row">
         <div class="info-label">2025 — 현재</div>
-        <div class="info-val">어나더오피스 · 온라인 영업 MD <span class="c-badge badge-blue" style="margin-left:0.4rem">재직중</span></div>
+        <div class="info-val">어나더오피스 · 영업팀 MD <span class="c-badge badge-blue" style="margin-left:0.4rem">재직중</span></div>
       </div>
       <div class="info-row">
         <div class="info-label">2023 — 2025</div>
@@ -308,8 +320,8 @@ footer{flex-direction:column;gap:0.3rem}
       성장 초기엔 채널을 키우고,<br>
       고점에선 체계를 세우고,<br>
       아무것도 없는 곳에선 처음부터 만들었습니다.<br><br>
-      매출 보고서부터 자사몰 HTML까지,<br>
-      실행할 수 있는 것은 직접 합니다.
+      이제는 브랜드의 감도를 지키면서<br>
+      자사몰과 데이터로 성장을 설계합니다.
     </div>
     <div style="display:flex;flex-direction:column;gap:1rem">
       <div style="padding:1rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline">
@@ -326,11 +338,11 @@ footer{flex-direction:column;gap:0.3rem}
       </div>
       <div style="padding:1rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline">
         <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)">직접 만든 것</span>
-        <span style="font-size:0.78rem;color:var(--black)">보고서 · 재고 서식 · 자사몰 페이지</span>
+        <span style="font-size:0.78rem;color:var(--black)">주간 리뷰 · 리오더 툴 · 등록 자동화 · 자사몰 페이지</span>
       </div>
       <div style="padding:1rem 0;display:flex;justify-content:space-between;align-items:baseline">
         <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)">희망 직군</span>
-        <span style="font-size:0.78rem;color:var(--blue)">온라인 MD · 기획 MD · 브랜드 MD</span>
+        <span style="font-size:0.78rem;color:var(--blue)">브랜드 MD · 온라인 MD</span>
       </div>
     </div>
   </div>
@@ -464,8 +476,8 @@ footer{flex-direction:column;gap:0.3rem}
         <div class="c-period">2025. 04 — 현재<br><span class="c-badge badge-blue">재직 중</span></div>
         <div>
           <div class="c-brand">어나더오피스</div>
-          <div class="c-role">온라인 영업 MD · 주식회사 오버레이</div>
-          <div class="c-desc">10년 경력 남성복 디자이너 브랜드, 25년 실결제 매출 약 115억. 운영 체계 전무한 상태에서 모든 것을 세팅 중.</div>
+          <div class="c-role">영업팀 MD · 주식회사 오버레이</div>
+          <div class="c-desc">10년 업력 남성복 디자이너 브랜드. 담당 온라인이 전체 매출의 약 80%. 운영 체계가 없던 상태에서 등록·재고·출고·자사몰·보고 체계를 새로 세우고, 자사몰 매출을 전년 대비 3.3배로 키움.</div>
           <div class="c-links">
             <a href="https://anotheroffice.co.kr" target="_blank" class="c-link">→ 브랜드 보기</a>
             <a href="https://www.instagram.com/anotheroffice_official" target="_blank" class="c-link">→ Instagram</a>
@@ -478,27 +490,31 @@ footer{flex-direction:column;gap:0.3rem}
           <div>
             <div class="expand-title">담당 업무</div>
             <ul class="expand-list">
-              <li>ERP 가격 데이터 전면 재정비 (셀릭·세원 소통, 24~25년 데이터 재세팅)</li>
-              <li>재고 송신 체계 재설계: 안전재고 제외 후 전 채널 동일 수량 매일 송신</li>
-              <li>매출 보고서 PPT 전면 개편 — 인사이트 기반 분석 보고로 전환</li>
-              <li>자사몰 기획전 페이지 HTML 직접 제작 및 운영 <a href="https://anotheroffice.cafe24.com/curation/curation01.html" target="_blank" style="color:var(--blue);font-size:0.68rem">→ 01</a> <a href="https://anotheroffice.cafe24.com/curation/curation02.html" target="_blank" style="color:var(--blue);font-size:0.68rem">→ 02</a></li>
-              <li>플랫폼 구좌 최대치 활용 및 전략 브랜드 캐시백 달성</li>
-              <li>리오더 시기·수량 기준 수립 및 아소트 제안</li>
-              <li>마케팅 예산 채널별 배분 기준 및 효율 관리 체계 구축</li>
-              <li>자사몰 리뉴얼 방향성 수립 — 국내외 40+ 브랜드 레퍼런스 분석 기반, 메인/상품목록/상품상세/아카이브 전 영역 개선안 기획</li>
-              <li>채널별 가격정책 매트릭스 직접 설계 — 기획연도·소진율·채널 기준 최대 할인율 및 마진 검증 시뮬레이션 포함</li>
+              <li><b>운영 체계</b> 상품 등록 자동화 — 사방넷·셀릭·카페24 어드민 구조와 옵션명 → 주문서 → 출고 화면 흐름 분석 기반</li>
+              <li><b>운영 체계</b> 채널 재고 배분 재설계 — 고정 비율(30/30/40) → 안전재고 제외 후 채널별 중복 배분, 5장 미만 소량 재고 자사몰 전용</li>
+              <li><b>운영 체계</b> 3개 거점(이천창고·성수창고·성수매장) 출고 매칭 → 매장 패킹·송장 → ERP·셀릭 반영 프로세스 정립</li>
+              <li><b>D2C 자사몰</b> 카페24 회원등급 5단계·등급별 할인/적립, 적립금 사용 한도·연 1회 소멸, 쿠폰 중복 제한 세팅</li>
+              <li><b>D2C 자사몰</b> 멤버십·기획전 페이지 HTML 직접 제작 <a href="https://anotheroffice.co.kr/customer-service/reremembership.html" target="_blank" style="color:var(--blue);font-size:0.68rem">→ 멤버십</a> <a href="https://anotheroffice.co.kr/curation/curation_15.html" target="_blank" style="color:var(--blue);font-size:0.68rem">→ 기획전</a></li>
+              <li><b>D2C 자사몰</b> 셋업(자켓+팬츠) 세트 판매 구조 도입 및 자사몰 선발매 기획</li>
+              <li><b>D2C 자사몰</b> 리뷰 체계 재설계 — 리뷰 솔루션 교체, MD 리뷰·스태프 착장컷, 월간 베스트 리뷰 이벤트 <a href="https://anotheroffice.co.kr/customer-service/rereviewevent.html" target="_blank" style="color:var(--blue);font-size:0.68rem">→ 이벤트</a></li>
+              <li><b>상품·데이터</b> 리오더 아소트 산출 툴 — 주평균 판매·재고주수·리드타임 반영 필요수량, 19개 자동 검증</li>
+              <li><b>상품·데이터</b> 채널별 가격정책 매트릭스 — 기획연도·소진율·채널 기준 할인율 및 마진 시뮬레이션</li>
+              <li><b>상품·데이터</b> 주간 매출 리뷰(20p+) 신설 — 월 마감 전망, 요일×시간대 주문 분석, 프로모션·소진율·리오더 현황</li>
+              <li><b>마케팅</b> 연 목표 → 채널별 목표 → 마케팅 예산(광고·룩북) 월별 배분 및 집행률 관리</li>
+              <li><b>마케팅</b> META 광고 소재 성과(ROAS·CTR)와 재고주수 연동 관리 — 적체 재고 대비 소재 공백 품번 발굴</li>
             </ul>
-            <div class="etags"><span class="etag">제로베이스세팅</span><span class="etag">ERP정비</span><span class="etag">재고체계</span><span class="etag">자사몰HTML</span><span class="etag">가격정책설계</span><span class="etag">자사몰리뉴얼기획</span></div>
+            <div class="etags"><span class="etag">D2C자사몰</span><span class="etag">운영자동화</span><span class="etag">재고배분</span><span class="etag">셋업판매</span><span class="etag">리뷰·멤버십</span><span class="etag">리오더툴</span><span class="etag">가격정책</span><span class="etag">광고소재관리</span></div>
           </div>
           <div>
             <div class="expand-title">주요 성과</div>
             <ul class="expand-list">
-              <li><strong>입사 직후 첫 성과</strong> — 입사 전 한 번도 달성 못했던 29CM 분기 캐시백 입사 첫 해 2회 연속 달성</li>
-              <li>2분기 (25.04~06) 캐시백 <strong>1,429만원</strong> 달성</li>
-              <li>4분기 (25.10~12) 캐시백 <strong>2,298만원</strong> 달성</li>
-              <li>캐시백 누적 총 <strong>약 3,727만원</strong></li>
-              <li>26년 1분기 목표 대비 <strong>119.7%</strong> 달성 (전년비 +15.6%)</li>
-              <li>1월 110% / 2월 141% / 3월 114% — 3개월 연속 목표 초과</li>
+              <li>자사몰 매출 <strong>전년비 3.3배</strong> (26년 1~9월), 전체 매출 내 비중 <strong>7.6% → 23.5%</strong></li>
+              <li>온라인 내 29CM 비중 51.7% → 40.1% — 플랫폼 의존도·수수료 부담 완화</li>
+              <li>셋업 세트 자사몰 선발매 — <strong>1주일 225건</strong> 주문, 2월 자사몰 매출 <strong>전년비 7.5배</strong>, 2월 목표 대비 <strong>141%</strong></li>
+              <li>상품 등록 <strong>3~4일 → 30분</strong>, 출고 매칭 <strong>1일 → 30분</strong> 단축 (현재도 사용 중)</li>
+              <li>26년 1분기 목표 대비 <strong>119.7%</strong> (전년비 +15.6%)</li>
+              <li>26SS 누계 소진율 <strong>82.4%</strong></li>
+              <li>입사 전 미달성이던 29CM 분기 캐시백 입사 첫 해 <strong>2회 연속 달성</strong> (25년 누적 약 3,727만원)</li>
             </ul>
           </div>
         </div>
@@ -509,16 +525,98 @@ footer{flex-direction:column;gap:0.3rem}
 </section>
 
 
+<!-- CASE STUDY -->
+<section id="case">
+  <div class="sec-header">
+    <span class="sec-num">02</span>
+    <span class="sec-name">Case Study — 어나더오피스</span>
+  </div>
+  <div class="case-grid">
+    <div class="case-item">
+      <div class="case-num">Case 01 · D2C</div>
+      <div class="case-title">플랫폼 중심 매출을<br>자사몰로 옮기다</div>
+      <div class="case-label">Problem</div>
+      <div class="case-text">온라인 매출의 절반 이상이 29CM에 집중. 자사몰은 회원등급·적립금·쿠폰 정책조차 세팅되지 않아 전체 매출의 7.6%에 그침.</div>
+      <div class="case-label">Action</div>
+      <ul class="case-list">
+        <li>회원등급 5단계·적립금·쿠폰 정책 세팅</li>
+        <li>멤버십·기획전 페이지 HTML 직접 제작</li>
+        <li>리뷰 솔루션 교체, MD 리뷰·스태프컷 도입</li>
+        <li>신상품·셋업 자사몰 선발매 운영</li>
+      </ul>
+      <div class="case-result">
+        <div><div class="case-kpi-val">3.3배</div><div class="case-kpi-label">자사몰 매출 전년비<br>(26년 1~9월)</div></div>
+        <div><div class="case-kpi-val">7.6→23.5%</div><div class="case-kpi-label">전체 매출 내<br>자사몰 비중</div></div>
+      </div>
+    </div>
+    <div class="case-item">
+      <div class="case-num">Case 02 · 상품 구성</div>
+      <div class="case-title">주력 셋업을<br>온라인 세트 상품으로</div>
+      <div class="case-label">Problem</div>
+      <div class="case-text">자켓+팬츠 셋업이 브랜드 주력인데, 온라인에서 세트로 등록하는 방법이 없어 단품으로만 판매. 객단가를 올릴 기회를 놓치고 있었음.</div>
+      <div class="case-label">Action</div>
+      <ul class="case-list">
+        <li>세트 상품 등록·옵션 구조 설계</li>
+        <li>객단가 제고 목적의 자사몰 선발매 제안</li>
+        <li>1주일 한정 셋업 프로모션 운영 (26.02)</li>
+      </ul>
+      <div class="case-result">
+        <div><div class="case-kpi-val">225건</div><div class="case-kpi-label">1주일 셋업 주문</div></div>
+        <div><div class="case-kpi-val">7.5배</div><div class="case-kpi-label">2월 자사몰 매출 전년비<br>(2월 목표 대비 141%)</div></div>
+      </div>
+    </div>
+    <div class="case-item">
+      <div class="case-num">Case 03 · 운영 설계</div>
+      <div class="case-title">흐름을 이해하면<br>시간이 줄어든다</div>
+      <div class="case-label">Problem</div>
+      <div class="case-text">상품 등록에 3~4일 수작업, 3개 거점 출고 매칭에 하루. 재고는 3개 몰에 30/30/40으로 잘라 넣어 채널별 결품 발생.</div>
+      <div class="case-label">Action</div>
+      <ul class="case-list">
+        <li>어드민·주문서·출고 화면 흐름 분석 → 등록 자동화</li>
+        <li>안전재고 제외 후 채널별 중복 배분, 소량 재고 자사몰 전용</li>
+        <li>3개 거점 출고 매칭 프로세스 정립</li>
+      </ul>
+      <div class="case-result">
+        <div><div class="case-kpi-val">30분</div><div class="case-kpi-label">상품 등록 (기존 3~4일)<br>출고 매칭 (기존 1일)</div></div>
+        <div><div class="case-kpi-val">82.4%</div><div class="case-kpi-label">26SS 누계 소진율</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WORK SAMPLES -->
 <section id="work">
   <div class="sec-header">
-    <span class="sec-num">04</span>
-    <span class="sec-name">Work Samples — 매출 보고서</span>
+    <span class="sec-num">03</span>
+    <span class="sec-name">Work Samples</span>
   </div>
 
   <!-- PPT 보고서 -->
   <div style="padding:1.5rem 2.5rem 2rem">
-    <div style="font-size:0.62rem;color:var(--blue);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)">어나더오피스 주간 매출 보고서 — 직접 설계 및 경영진 보고 (수치 블러 처리)</div>
+    <div class="sub-title">직접 만든 자사몰 페이지 &amp; 운영 툴</div>
+    <div class="work-cards-grid">
+      <a class="work-card" href="https://anotheroffice.co.kr/customer-service/reremembership.html" target="_blank">
+        <div class="work-card-top"><span class="work-card-num">Page 01</span><span class="work-card-arrow">↗</span></div>
+        <div class="work-card-title">멤버십 페이지 — 회원등급 5단계·혜택·적립금 정책</div>
+        <div class="work-card-url">anotheroffice.co.kr/customer-service</div>
+      </a>
+      <a class="work-card" href="https://anotheroffice.co.kr/curation/curation_15.html" target="_blank">
+        <div class="work-card-top"><span class="work-card-num">Page 02</span><span class="work-card-arrow">↗</span></div>
+        <div class="work-card-title">기획전 페이지 — 26AW 2nd Drop</div>
+        <div class="work-card-url">anotheroffice.co.kr/curation</div>
+      </a>
+      <a class="work-card" href="https://anotheroffice.co.kr/customer-service/rereviewevent.html" target="_blank">
+        <div class="work-card-top"><span class="work-card-num">Page 03</span><span class="work-card-arrow">↗</span></div>
+        <div class="work-card-title">베스트 리뷰 이벤트 — 월간 포토리뷰 확보</div>
+        <div class="work-card-url">anotheroffice.co.kr/customer-service</div>
+      </a>
+      <div class="work-card" style="cursor:default">
+        <div class="work-card-top"><span class="work-card-num">Tool</span><span class="work-card-arrow">▦</span></div>
+        <div class="work-card-title">리오더 아소트 산출 툴 · META 광고 소재 관리 시트</div>
+        <div class="work-card-url">Excel · 재고주수·리드타임·ROAS 연동 (내부 자료)</div>
+      </div>
+    </div>
+    <div class="sub-title" style="margin-top:1rem">어나더오피스 주간 매출 리뷰 — 직접 설계 및 경영진 보고 (수치 블러 처리)</div>
     <div class="ppt-grid">
       
       <div class="ppt-card">
@@ -546,7 +644,7 @@ footer{flex-direction:column;gap:0.3rem}
 <!-- SKILLS -->
 <section id="skills">
   <div class="sec-header">
-    <span class="sec-num">05</span>
+    <span class="sec-num">04</span>
     <span class="sec-name">Skills</span>
   </div>
   <div class="skills-grid">
@@ -557,15 +655,16 @@ footer{flex-direction:column;gap:0.3rem}
       <div class="skill-item">네이버 / GS SHOP</div>
       <div class="skill-item">온라인 편집몰 위탁·사입</div>
       <div class="skill-item">오프라인 편집샵 위탁·사입</div>
-      <div class="skill-item">자사몰 운영 (카페24)</div>
+      <div class="skill-item">자사몰(D2C) 운영 — 카페24 회원·적립금·쿠폰 정책</div>
     </div>
     <div class="skill-col">
       <div class="skill-col-title">기획·운영</div>
-      <div class="skill-item">온라인 세팅 (등록·재고) 디벨롭 및 업데이트</div>
+      <div class="skill-item">온라인 등록·재고 배분·출고 프로세스 설계 및 자동화</div>
       <div class="skill-item">목표매출 수립 및 관리</div>
       <div class="skill-item">프로모션 기획 및 실행</div>
-      <div class="skill-item">리오더 기획 및 수량 산출</div>
-      <div class="skill-item">마케팅 예산 관리</div>
+      <div class="skill-item">리오더 기획 및 수량·사이즈 아소트 산출</div>
+      <div class="skill-item">셋업·번들 상품 구성으로 객단가 제고</div>
+      <div class="skill-item">마케팅 예산 설계 및 광고 소재 성과 관리</div>
       <div class="skill-item">채널별 가격정책 수립 (기획연도·소진율 기준 할인율 매트릭스 설계)</div>
       <div class="skill-item">콜라보 브랜드 기획 및 실행</div>
     </div>
@@ -573,8 +672,9 @@ footer{flex-direction:column;gap:0.3rem}
       <div class="skill-col-title">툴 & 데이터</div>
       <div class="skill-item">Excel — 리오더 산출·예산·재고 수식 서식 직접 설계</div>
       <div class="skill-item">PowerPoint — 경영진 보고용 매출 분석 보고서 제작</div>
+      <div class="skill-item">AI (Claude 등) — 업무 자동화·데이터 분석·리서치</div>
       <div class="skill-item">Notion — 업무 체계 정리 및 문서화</div>
-      <div class="skill-item">HTML / CSS — 자사몰 기획전 페이지 직접 제작·운영</div>
+      <div class="skill-item">HTML / CSS — 자사몰 기획전·멤버십 페이지 직접 제작·운영</div>
       <div class="skill-item">카페24 — raw 데이터 추출 및 직접 분석</div>
       <div class="skill-item">ERP / 셀릭 / 사방넷 — 재고 송신·정산·주문 관리</div>
     </div>
@@ -584,7 +684,7 @@ footer{flex-direction:column;gap:0.3rem}
 <!-- WORK STYLE -->
 <section>
   <div class="sec-header">
-    <span class="sec-num">06</span>
+    <span class="sec-num">05</span>
     <span class="sec-name">일하는 방식</span>
   </div>
   <div class="workstyle-wrap">
@@ -596,12 +696,12 @@ footer{flex-direction:column;gap:0.3rem}
     <div class="ws-item">
       <div class="ws-num">02</div>
       <div class="ws-title">데이터 기반 운영 설계</div>
-      <div class="ws-desc">매출 보고서, 재고 산출 서식, 마케팅 예산 양식까지 직접 설계. 단순 수치 확인을 넘어 데이터에서 인사이트를 도출하고 운영에 반영합니다.</div>
+      <div class="ws-desc">주간 매출 리뷰, 리오더 아소트 툴, 마케팅 예산·광고 소재 시트까지 직접 설계. 수치를 확인하는 데서 그치지 않고 재고·리오더·광고 판단으로 연결합니다.</div>
     </div>
     <div class="ws-item">
       <div class="ws-num">03</div>
-      <div class="ws-title">코드를 다루는 MD</div>
-      <div class="ws-desc">HTML/CSS를 활용해 자사몰 기획전 페이지 직접 제작. 외주 개발자·스킨 업체와의 기술 소통도 직접 진행. 에이전시 의존도를 낮추고 빠른 실행이 가능합니다.</div>
+      <div class="ws-title">코드와 AI를 다루는 MD</div>
+      <div class="ws-desc">HTML/CSS로 자사몰 페이지를 직접 만들고, AI로 반복 업무를 자동화합니다. 3~4일 걸리던 상품 등록을 30분으로 줄인 것처럼, 시스템 흐름을 이해해 빠르게 실행합니다.</div>
     </div>
   </div>
 </section>
@@ -609,17 +709,16 @@ footer{flex-direction:column;gap:0.3rem}
 <!-- CONTACT -->
 <section id="contact">
   <div class="sec-header">
-    <span class="sec-num">07</span>
+    <span class="sec-num">06</span>
     <span class="sec-name">Contact</span>
   </div>
   <div class="contact-wrap">
     <div class="contact-left">
       <div class="contact-big">함께<br><span class="blue">일하고 싶다면</span><br>연락주세요.</div>
-      <p class="contact-sub">무신사 · 29CM · W컨셉 등 주요 편집몰 채널 운영 경험을 바탕으로, 브랜드 가치를 지키면서 매출을 만들어내는 MD입니다. 더 큰 브랜드에서 제 경험을 쓸 수 있는 기회를 찾고 있습니다.</p>
+      <p class="contact-sub">무신사 · 29CM · W컨셉 등 주요 플랫폼과 자사몰(D2C) 운영 경험을 바탕으로, 브랜드 가치를 지키면서 매출을 만들어내는 MD입니다. 브랜드의 런칭과 성장을 함께 만들 수 있는 기회를 찾고 있습니다.</p>
       <div class="contact-badges">
-        <span class="c-badge-item">온라인 MD</span>
-        <span class="c-badge-item">기획 MD</span>
         <span class="c-badge-item">브랜드 MD</span>
+        <span class="c-badge-item">온라인 MD</span>
       </div>
     </div>
     <div class="contact-right">
@@ -627,14 +726,14 @@ footer{flex-direction:column;gap:0.3rem}
       <div class="crow"><span class="crow-label">Email</span><span class="crow-val"><a href="mailto:splendent95@naver.com">splendent95@naver.com</a></span></div>
       <div class="crow"><span class="crow-label">Phone</span><span class="crow-val">010-7403-1213</span></div>
       <div class="crow"><span class="crow-label">Instagram</span><span class="crow-val"><a href="https://www.instagram.com/uuui02/" target="_blank">@uuui02</a></span></div>
-      <div class="crow"><span class="crow-label">경력</span><span class="crow-val">5년 이상 / 캐주얼·남성복</span></div>
-      <div class="crow"><span class="crow-label">희망 직군</span><span class="crow-val">온라인 MD · 기획 MD · 브랜드 MD</span></div>
+      <div class="crow"><span class="crow-label">경력</span><span class="crow-val">5년 이상 / 캐주얼·남성복 · D2C</span></div>
+      <div class="crow"><span class="crow-label">희망 직군</span><span class="crow-val">브랜드 MD · 온라인 MD</span></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-txt">© 이시원 · Online Sales MD</div>
+  <div class="footer-txt">© 이시원 · Brand MD</div>
   <div class="footer-txt">Casual · Menswear · Fashion</div>
 </footer>
 
